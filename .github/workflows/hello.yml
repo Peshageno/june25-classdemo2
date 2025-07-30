@@ -1,1 +1,8 @@
-hello lad
+name: helo world 
+on: [push] 
+jobs:
+  say-hello:
+    runs-on: ubuntu-lastest
+    steps:
+      - name: Hello World
+        run: echo "Hello, World!"
