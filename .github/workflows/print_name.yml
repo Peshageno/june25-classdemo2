@@ -1,0 +1,14 @@
+name: Print My Name
+
+on: [push]
+
+jobs:
+  print-name:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print my name
+        run: echo "My name is Agenorwot Patience"
