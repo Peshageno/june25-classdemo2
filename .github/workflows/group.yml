@@ -1,0 +1,11 @@
+name: Group work
+on: [push]
+jobs:
+  print_group:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print group name
+        run: echo "This is the group workflow for hello and print_name jobs."
