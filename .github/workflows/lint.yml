@@ -43,9 +43,10 @@ jobs:
       - name: Install black
         run: pip install black
 
-      - name: Run Black Linter
+      - name: Check code formatting with black
         run: |
           black --check .
+        continue-on-error: false  # fails the job if code is not formatted
 
   build-and-deploy:
     needs: lint
@@ -55,7 +56,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Simulate Build
-        run: echo "Building application..."
+        run: echo "✅ Building application..."
 
       - name: Simulate Deployment
-        run: echo "Deploying application..."
+        run: echo "🚀 Deploying application..."
