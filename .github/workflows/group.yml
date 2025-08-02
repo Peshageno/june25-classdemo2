@@ -31,7 +31,5 @@ jobs:
       - name: run pylint
         run: |
           source $VENV/bin/activate
-          pylint src --output-format=text --reports=n --disable=missing-module-docstring,missing-class-docstring,missing-function-docstring
-          pylint tests --output-format=text --reports=n --disable=missing-module-docstring,missing-class-docstring,missing-function-docstring
-      - name: Print success message
-        run: echo "All tests passed successfully!"
+          pylint june25_classdemo2
+          

@@ -1,5 +1,6 @@
+"""Views for the main pages of the site."""
 from django.shortcuts import render
-from django.http import HttpResponse
 
 def index(request):
+    """Render the homepage with a greeting."""
     return render(request, 'index.html', {'greeting': 'Hello'})
